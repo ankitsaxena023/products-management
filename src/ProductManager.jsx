@@ -6,7 +6,6 @@ const Productmanager = ({ data, setData }) => {
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [newQuantity, setNewQuantity] = useState(quantity);
 
   const handleSubmit = (e) => {
     e.preventDefault();
