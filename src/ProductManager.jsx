@@ -26,12 +26,8 @@ const Productmanager = ({ data, setData }) => {
     setQuantity("");
   };
 
-  const handleBuyOne = (id) => {
-    setData((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-      )
-    );
+  const handleBuyOne = (item) => {
+    console.log("item", item);
   };
 
   // const handleBuyOne = (id) => {
