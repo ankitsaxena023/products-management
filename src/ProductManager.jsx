@@ -34,6 +34,14 @@ const Productmanager = ({ data, setData }) => {
     );
   };
 
+  // const handleBuyOne = (id) => {
+  //   setData((prev) =>
+  //     prev.map((item) =>
+  //       item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+  //     )
+  //   );
+  // };
+
   const handleBuyTwo = (id) => {
     setData((prev) =>
       prev.map((item) =>
@@ -57,8 +65,8 @@ const Productmanager = ({ data, setData }) => {
       <h1 className="text-3xl text-center m-4">Products Table</h1>
       <div>
         <form onSubmit={handleSubmit}>
-          <div className="flex gap-2 text-center ">
-            <div>
+          <div className="flex gap-2 text-center flex-col justify-center items-center">
+            <div className="flex flex-col max-w-48">
               <label className="mr-4">Item Name</label>
               <input
                 type="text"
@@ -66,7 +74,7 @@ const Productmanager = ({ data, setData }) => {
                 onChange={(e) => setItem(e.target.value)}
               />
             </div>
-            <div>
+            <div className="flex flex-col max-w-48">
               <label>Description</label>
               <input
                 type="text"
@@ -74,7 +82,7 @@ const Productmanager = ({ data, setData }) => {
                 onChange={(e) => setDesc(e.target.value)}
               />
             </div>
-            <div>
+            <div className="flex flex-col max-w-48">
               <label>Price</label>
               <input
                 type="text"
@@ -82,7 +90,7 @@ const Productmanager = ({ data, setData }) => {
                 onChange={(e) => setPrice(e.target.value)}
               />
             </div>
-            <div>
+            <div className="flex flex-col max-w-48">
               <label>Quantity</label>
               <input
                 type="text"
