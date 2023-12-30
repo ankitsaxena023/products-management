@@ -29,6 +29,7 @@ const Productmanager = ({ data, setData }) => {
   const handleBuyOne = (item) => {
     console.log("item", item);
     setQuantity(item.quantity - 1);
+    setData(item);
   };
 
   // const handleBuyOne = (id) => {
