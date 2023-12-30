@@ -57,7 +57,7 @@ const Productmanager = ({ data, setData }) => {
       <h1 className="text-3xl text-center m-4">Products Table</h1>
       <div>
         <form onSubmit={handleSubmit}>
-          <div className="flex gap-2 text-center flex-col justify-center items-center">
+          <div className="flex gap-2 text-center flex-col justify-center items-center md:flex-row lg:flex-row">
             <div className="flex flex-col max-w-48">
               <label className="mr-4">Item Name</label>
               <input
