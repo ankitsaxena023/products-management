@@ -113,7 +113,7 @@ const Productmanager = ({ data, setData }) => {
             item={item}
             setData={setData}
             data={data}
-            handleBuyOne={() => handleBuyOne(item.id)}
+            handleBuyOne={() => handleBuyOne(item)}
             handleBuyTwo={() => handleBuyTwo(item.id)}
             handleBuyThree={() => handleBuyThree(item.id)}
           />
