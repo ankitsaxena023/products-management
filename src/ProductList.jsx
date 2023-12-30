@@ -6,7 +6,7 @@ const ProductList = ({ item, handleBuyOne, handleBuyTwo, handleBuyThree }) => {
 
   return (
     <>
-      <div className="flex flex-col gap-4 justify-center items-center mb-4">
+      <div className="flex flex-col gap-4 justify-center items-center mb-4 md:flex-row lg:flex-row">
         <div>
           <ul className="flex gap-4 text-2xl">
             <li>{itemName}</li>
