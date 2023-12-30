@@ -26,19 +26,13 @@ const Productmanager = ({ data, setData }) => {
     setQuantity("");
   };
 
-  const handleBuyOne = (item) => {
-    console.log("item", item);
-    setQuantity(item.quantity - 1);
-    setData(item);
+  const handleBuyOne = (id) => {
+    setData((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+      )
+    );
   };
-
-  // const handleBuyOne = (id) => {
-  //   setData((prev) =>
-  //     prev.map((item) =>
-  //       item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-  //     )
-  //   );
-  // };
 
   const handleBuyTwo = (id) => {
     setData((prev) =>
@@ -111,7 +105,7 @@ const Productmanager = ({ data, setData }) => {
             item={item}
             setData={setData}
             data={data}
-            handleBuyOne={() => handleBuyOne(item)}
+            handleBuyOne={() => handleBuyOne(item.id)}
             handleBuyTwo={() => handleBuyTwo(item.id)}
             handleBuyThree={() => handleBuyThree(item.id)}
           />
