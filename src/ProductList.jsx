@@ -18,7 +18,7 @@ const ProductList = ({ item, handleBuyOne, handleBuyTwo, handleBuyThree }) => {
         <div className="text-2xl flex gap-4">
           <button
             className="bg-teal-800 px-4 py-2 rounded-md hover:bg-teal-500"
-            onClick={() => handleBuyOne(item)}
+            onClick={() => handleBuyOne(id)}
           >
             Buy1
           </button>
